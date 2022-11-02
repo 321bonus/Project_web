@@ -8,8 +8,7 @@ import psycopg2
 
 app  = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://webadmin:MDDnfo15110@node38352-bunnapon.proen.app.ruk-com.cloud:11234/work'
-app.config['SQLALCHEMY_TRACK_MODIFICATION']= False
+
 
 
 
