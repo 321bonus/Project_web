@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/css/graph.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../static/css/images/logo.png" class="logo">
+            <ul>
+                <li><a href="{{ url_for('Home')}}">Home</a></li>
+                <li><a href="{{ url_for('Present') }}">TEAM</a></li>
+                <li><a href="{{ url_for('Table') }}">Table</a></li>
+                <li><a href="{{ url_for('Graph_eu') }}">Euro Graph</a></li>
+                <li><a href="{{ url_for('Graph_th') }}">Thai Graph</a></li>
+                <li><a href="{{ url_for('Graph_jp') }}">Japan Graph</a></li>
+
+            </ul>
+        </div>
+    
+
+    </div>
+    
+    <div class="flag">
+        <img src="../static/css/images/Euro.png" width="100px" height="100px">
+    </div>
+    <div class="box-text">
+        <h1>EURO/USD</h1>
+        <h2>{{ result_euro[0]}}</h2>
+        <h3>{{ result_euro[1]}}</h3>
+        <h4>{{ result_euro[2]}}</h4>
+    </div>
+    <div class="box-text-right">
+      
+    </div>
+    
+
+
+    <div class="col_md-5" style="position:absolute; top:400px; left:550px; width:900px; height:800px;">
+            <canvas class="graph_of_show" id="myChart"></canvas>
+    </div>
+
+
+
+        <script>
+            const labels = [
+            'day befor yesterday',
+            'yesterday',
+            'today',
+
+            ];
+
+            const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Euro Graph',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [{% for dt in all_money %} {{dt}}, {% endfor %}],
+            }]
+            };
+
+            const config = {
+            type: 'line',
+            data: data,
+            options: {}
+            };
+        </script>
+
+        <script>
+            const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+            );
+        </script>
+
+
+
+
+    <!---------------Grpah------------------>
+    </div>
+    <footer>
+        <div class="art">
+            <div class="content">
+                <section>
+                    <header>Company</header>
+                    <a href="{{ url_for('Present') }}">About</a>
+                    <a href="{{ url_for('Present') }}">Team</a>
+
+                </section>
+                <section>
+                    <header>Developmnet</header>
+                    <a href="https://finance.yahoo.com/currencies?.tsrc=fin-srch">Website for scap</a>
+                    <a href="https://github.com/5656ar/Project">Git hub</a>
+                </section>
+                <div class="social">
+                    <header>Social media</header>
+                    <i class="fa fa-facebook-square" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-instagram" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-twitter" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-github" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                </div>
+            </div>
+            <div class="noctice">
+                Copyright Protected &copy;
+                <strong>Papop Coder</strong>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

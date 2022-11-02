@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../static/css/contract.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../static/css/images/logo.png" class="logo">
+            <ul>
+                <li><a href="{{ url_for('Home')}}">Home</a></li>
+                <li><a href="{{ url_for('Present') }}">TEAM</a></li>
+                <li><a href="{{ url_for('Table') }}">Table</a></li>
+                <li><a href="{{ url_for('Graph_eu') }}">Euro Graph</a></li>
+                <li><a href="{{ url_for('Graph_th') }}">Thai Graph</a></li>
+                <li><a href="{{ url_for('Graph_jp') }}">Japan Graph</a></li>
+                
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!-----------Contract Form--------->
+    <div class="container">
+        <h1>Connect With Us</h1>
+        <p> We would love to respond to your queries and help you succeed. Fell
+            free to get in touch with us
+        </p>
+        
+        <div class="contact-box">
+
+            <div class="contact-left">
+                <h3>Send your request</h3>
+            
+                <form>
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label>First name</label>
+                            <input type="text" placeholder=" ">
+
+                        </div>
+
+                        <div class="input-group">
+                            <label>Last name</label>
+                            <input type="text" placeholder=" ">
+
+                        </div>
+
+
+                    </div>
+                    <div class="input-row">
+
+                   
+                    </div>
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="text" placeholder=" ">
+
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phonenumber</label>
+                            <input type="text" placeholder=" ">
+
+                        </div>
+
+
+
+                    </div>
+
+                
+                
+                    <label>Message</label>
+                    <textarea rows="8" placeholder="Mesassage here"></textarea>
+
+
+                    <button type="submit" value="Submit">Submit</button>
+                    <button type="reset" value="Reset">Reset</button>
+                </form>
+                
+                
+
+            
+            
+            </div>
+            
+
+
+
+
+
+            <div class="contact-right">
+                <h3>Reach us</h3>
+                
+                <table>
+                    
+                    <tr>
+                        <td>Email</td>
+                        <td>contract@email.com</td>
+                    </tr>
+                
+                
+                    <tr>
+                        <td>Phone</td>
+                        <td>+++</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Adress</td>
+                        <td>+++<br>
+                            ++++<br>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td>Email</td>
+                        <td>contract@email.com</td>
+                    </tr>
+                
+                
+                </table>
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div>
+
+
+
+
+
+
+
+        </div>   
+
+    
+
+    
+    
+    </div>
+
+    </div>
+    <footer>
+        <div class="art">
+            <div class="content">
+                <section>
+                    <header>Company</header>
+                    <a href="{{ url_for('Present') }}">About</a>
+                    <a href="{{ url_for('Present') }}">Team</a>
+
+                </section>
+                <section>
+                    <header>Developmnet</header>
+                    <a href="https://finance.yahoo.com/currencies?.tsrc=fin-srch">Website for scap</a>
+                    <a href="https://github.com/5656ar/Project">Git hub</a>
+                </section>
+                <div class="social">
+                    <header>Social media</header>
+                    <i class="fa fa-facebook-square" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-instagram" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-twitter" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-github" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                </div>
+            </div>
+            <div class="noctice">
+                Copyright Protected &copy;
+                <strong>Papop Coder</strong>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

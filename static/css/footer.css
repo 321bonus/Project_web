@@ -1,0 +1,103 @@
+footer{
+    background-color: var(--bg--light);
+    line-height: 24px;
+    color: var(--text);
+    display: flex;
+    place-content: end;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+footer.art{
+    background-color: var(--bg);
+    padding: 16px;
+    padding-top: 48px;
+    clip-path: polygon(0%,5%,15%,0%,100%,10%,10%);
+
+
+}
+
+:root{
+    --bg:#219ebc;
+    --bg-light: #24aa94;
+    --text:white;
+    --hover:#ffff00;
+    --light: #ffff0031;
+
+}
+
+
+footer{
+    background-color: var(--bg--light);
+    line-height: 24px;
+    color: var(--text)
+}
+footer .art{
+    background-color: var(--bg);
+    padding-top: 48px;
+    padding: 16px;
+    
+}
+
+footer .content{
+    list-style: none;
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 16px;
+    max-width: 100vh -100px;
+}
+footer header{
+    font-size: 21px;
+    padding-block: 16px;
+
+}
+
+footer .content a{
+    display: block;
+    padding-block: 12px ;
+    color: var(--text);
+    opacity: 0.65;
+    text-decoration: none;
+}
+
+footer .content a:hover{
+    opacity: 1;
+    color: var(--hover);
+    font-size:18px;
+}
+
+footer .social{
+    margin-block: 16px;
+
+
+}
+
+footer .social i {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--light);
+    border-radius: 8px;
+    width: 30%;
+
+}
+
+footer .social i:hover{
+    color: var(--hover);
+    border-color: var(--hover);
+    box-shadow: 0px 0px 16px inset var(--light);
+
+}
+footer .noctice{
+    text-align: center;
+    padding: 24px;
+}
+
+
+footer .noctice strong{
+    color: var(--hover);
+    text-transform: uppercase;
+}

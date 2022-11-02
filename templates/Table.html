@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/css/table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../static/css/images/logo.png" class="logo">
+            <ul>
+                <li><a href="{{ url_for('Home')}}">Home</a></li>
+                <li><a href="{{ url_for('Present') }}">TEAM</a></li>
+                <li><a href="{{ url_for('Table') }}">Table</a></li>
+                <li><a href="{{ url_for('Graph_eu') }}">Euro Graph</a></li>
+                <li><a href="{{ url_for('Graph_th') }}">Thai Graph</a></li>
+                <li><a href="{{ url_for('Graph_jp') }}">Japan Graph</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+            <table id = 'customer'>
+                <thead>
+                <tr>
+                    <th><img src="../static/css/images/America.png" width="40px" height="40px" style="vertical-align:middle"> Amount</th>
+                    
+                    <th>Change</th>
+                    <th>Last Change</th>
+                    <th>Change rate</th>
+
+                </tr>
+                <thead>
+                <tbody>
+
+
+                
+                <tr>
+                    <td><img src="../static/css/images/Euro.png" width="40px" height="40px" style="vertical-align:middle">Euro</td>
+                    <td>{{ result_euro[0] }}</td>
+                    <td>{{ result_euro[1]}}</td>
+                    <td>{{ result_euro[2]}}</td>
+                    
+                    
+
+                </tbody>
+                
+
+                
+                <tr>
+                    <td><img src="../static/css/images/japan.png" width="40px" height="40px" style="vertical-align:middle">Japan</td>
+                    <td>{{ result_japan[0]}}</td>
+                    <td>{{result_japan[1]}}</td>
+                    <td>{{ result_japan[2]}}</td>
+                    
+
+                </tbody>
+                
+
+
+                
+                <tr>
+                    <td><img src="../static/css/images/thai.png" width="40px" height="40px" style="vertical-align:middle">Thailand</td>
+                    <td>{{  result_thai[0]}}</td>
+                    <td>{{  result_thai[1]}}</td>
+                    <td>{{  result_thai[2]}}</td>
+                    
+                </tbody>
+                
+
+
+            </table>
+
+
+        </div>
+
+
+
+        <div class="col_md-5" style="position:absolute; top:60px; left:10px; width:500px; height:500px;">
+       
+            <canvas class="graph_of_show" id="myChart"></canvas>
+
+        </div>
+
+
+
+
+
+    <footer>
+        <div class="art">
+            <div class="content">
+                <section>
+                    <header>Company</header>
+                    <a href="{{ url_for('Present') }}">About</a>
+                    <a href="{{ url_for('Present') }}">Team</a>
+
+                </section>
+                <section>
+                    <header>Developmnet</header>
+                    <a href="https://finance.yahoo.com/currencies?.tsrc=fin-srch">Website for scap</a>
+                    <a href="https://github.com/5656ar/Project">Git hub</a>
+
+                </section>
+                <div class="social">
+                    <header>Social media</header>
+                    <i class="fa fa-facebook-square" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-instagram" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-twitter" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-github" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                </div>
+            </div>
+            <div class="noctice">
+                Copyright Protected &copy;
+                <strong>Papop Coder</strong>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

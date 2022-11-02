@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../static/css/about.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../static/css/images/logo.png" class="logo">
+            <ul>
+                <li><a href="{{ url_for('Home')}}">Home</a></li>
+                <li><a href="{{ url_for('Present') }}">TEAM</a></li>
+                <li><a href="{{ url_for('Table') }}">Table</a></li>
+                <li><a href="{{ url_for('Graph_eu') }}">Euro Graph</a></li>
+                <li><a href="{{ url_for('Graph_th') }}">Thai Graph</a></li>
+                <li><a href="{{ url_for('Graph_jp') }}">Japan Graph</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+            <div class="Boxtext">
+
+                <h1>ยินดีต้อนรับเข้าสู้เว็บไซต์ของเรา</h1>
+                <p>เว็บไซต์ของเรานั้นถูกสร้างขึ้นมาเพื่อเป็นส่วนในการฝึกทักษะ การ Scraping</p>
+                <p>โดยใน ทักษะที่เราจะพัฒนาหลังจบการทำ Project ครั้งนี้อันได้แก่</p>
+                <p>1.การ scraping Website</p>
+                <p>2.การจัดหน้าตา Layout ของ Website</p>
+                <p>3.ทักษะการทำงานที่เป็น Team</p>
+                <p>4.ทักษะการนำเสนอ Project</p>
+            </div>
+
+
+
+    </div>
+    <footer>
+        <div class="art">
+            <div class="content">
+                <section>
+                    <header>Company</header>
+                    <a href="{{ url_for('Present') }}">About</a>
+                    <a href="{{ url_for('Present') }}">Team</a>
+
+                </section>
+                <section>
+                    <header>Developmnet</header>
+                    <a href="https://finance.yahoo.com/currencies?.tsrc=fin-srch">Website for scap</a>
+                    <a href="https://github.com/5656ar/Project">Git hub</a>
+                </section>
+                <div class="social">
+                    <header>Social media</header>
+                    <i class="fa fa-facebook-square" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-instagram" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-twitter" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-github" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                </div>
+            </div>
+            <div class="noctice">
+                Copyright Protected &copy;
+                <strong>Papop Coder</strong>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

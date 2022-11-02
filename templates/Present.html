@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/css/table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+         h1{
+            position: relative;
+            top: -280px;
+            left: 30px;
+            font-size:48px;
+            color: burlywood
+        } 
+         /* .img {
+            margin:auto;
+            text-align: center;
+
+        }  */
+         /* .img {
+            width: 150px;
+            height: 150px;
+            background: rgb(219, 13, 13) ;
+            border: 2px solid rgb(12, 12, 12);
+            border-radius: 50%;
+        }  */
+        .img1 img{
+            position: relative;
+            top: 90px;
+            left: 60px;
+            border-radius: 50%;
+            
+        }
+        .text1 {
+            position: relative;
+            top: 90px;
+            left: 60px;
+            font-size: 25px;
+            color: burlywood;
+            
+        }
+        .img2 img{
+            position: relative;
+            top: -350px;
+            left: 520px;
+            border-radius: 50%;
+        }
+        .text2 {
+            position: relative;
+            top: -350px;
+            left: 520px;
+            font-size: 25px;
+            color: burlywood
+        }
+        .img3 img{
+            position: relative;
+            top: -795px;
+            left: 1000px;
+            border-radius: 50%;
+        }
+        .text3 {
+            position: relative;
+            top: -795px;
+            left: 1000px;
+            font-size: 25px;
+            color: burlywood
+            
+        }
+        .img4 img{
+            position: relative;
+            top: -1240px;
+            left: 1500px;
+            border-radius: 50%;
+        }
+        .text4 {
+            position: relative;
+            font-size: 25px;
+            top: -1240px;
+            left: 1500px;
+            color: burlywood;
+        }
+        a:link{
+            color: burlywood;
+            background-color: transparent;
+            text-decoration: none;
+            animation-delay: 0.5s;
+        }
+        a:visited{
+            color: burlywood;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(124, 90, 46);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:active{
+            color: rgb(105, 151, 105);
+            background-color: transparent;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="../static/css/images/logo.png" class="logo">
+            <ul>
+                <li><a href="{{ url_for('Home')}}">Home</a></li>
+                <li><a href="{{ url_for('Present') }}">TEAM</a></li>
+                <li><a href="{{ url_for('Table') }}">Table</a></li>
+                <li><a href="{{ url_for('Graph_eu') }}">Euro Graph</a></li>
+                <li><a href="{{ url_for('Graph_th') }}">Thai Graph</a></li>
+                <li><a href="{{ url_for('Graph_jp') }}">Japan Graph</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+    
+    <div class="minbonus">
+
+        <h1>Present</h1>
+        <div class="img1">
+            <img src="../static/css/images/Bunapon.jpg" alt="" width="350" height="350">
+        </div>
+        <div class="text1">
+            <span>Name</span> :  Bunapon Takunwan<br></a>
+            <span>ID</span> : 6406022620037 <br>
+            <a href="https://www.facebook.com/new.bunnapon/"><span>Facebook</span> : Bunapon Takunwan <br></a>
+        </div>
+
+        <div class="img2">
+            <img src="../static/css/images/papop.jpg" alt="" width="350" height="350">
+        </div>
+        <div class="text2">
+            <span>Name</span> : Papop Sangeamsak <br>
+            <span>ID</span> : 6406022620031 <br>
+            <a href="https://www.facebook.com/profile.php?id=100077653712995"><span>Facebook</span> : Papop Sangeamsak <br></a>
+        </div>
+        
+        <div class="img3">
+            <img src="../static/css/images/puntita2.1.jpg.png" alt="" width="350" height="350">
+        </div>
+        <div class="text3">
+            <span>Name</span> : Puntita Chaungchawna <br>
+            <span>ID</span> : 6406022620088 <br>
+            <a href="https://www.facebook.com/profile.php?id=100012972345306"><span>Facebook</span> : Puntita Chaungchawna <br></a>
+        </div>
+
+        <div class="img4">
+            <img src="../static/css/images/Chalongrath.jpg" alt="" width="350" height="350">
+        </div>
+        <div class="text4">
+            <span>Name</span> : Chalongrath Kotsriwong <br>
+            <span>ID</span> : 6406022620096 <br>
+            <a href="https://www.facebook.com/chalongrath.kodlord/"><span>Facebook</span> : Chalongrath Kotsriwong<br></a>
+        </div>
+    </div>
+    <footer>
+        <div class="art">
+            <div class="content">
+                <section>
+                    <header>Company</header>
+                    <a href="{{ url_for('Present') }}">About</a>
+                    <a href="{{ url_for('Present') }}">Team</a>
+
+                </section>
+                <section>
+                    <header>Developmnet</header>
+                    <a href="https://finance.yahoo.com/currencies?.tsrc=fin-srch">Website for scap</a>
+                    <a href="https://github.com/5656ar/Project">Git hub</a>
+                    
+                </section>
+                <div class="social">
+                    <header>Social media</header>
+                    <i class="fa fa-facebook-square" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-instagram" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-twitter" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                    <i class="fa fa-github" style="font-size:36px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>
+                </div>
+            </div>
+            <div class="noctice">
+                Copyright Protected &copy;
+                <strong>Papop Coder</strong>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
