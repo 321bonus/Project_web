@@ -42,7 +42,7 @@ def Table():
     connection= psycopg2.connect(user ='webadmin',
                                 password ='MDDnfo15110',
                                 host = 'node38352-bunnapon.proen.app.ruk-com.cloud', 
-                                port = '11234',
+                                port = '5432',
                                 database ='work')
 
     Cursor = connection.cursor()
@@ -95,7 +95,7 @@ def Graph_eu():
     connection= psycopg2.connect(user ='webadmin',
                                 password ='MDDnfo15110',
                                 host = 'node38352-bunnapon.proen.app.ruk-com.cloud', 
-                                port = '11234',
+                                port = '5432',
                                 database ='work')
 
     Cursor = connection.cursor()
@@ -138,7 +138,7 @@ def Graph_th():
     connection= psycopg2.connect(user ='webadmin',
                                 password ='MDDnfo15110',
                                 host = 'node38352-bunnapon.proen.app.ruk-com.cloud', 
-                                port = '11234',
+                                port = '5432',
                                 database ='work')
 
     Cursor = connection.cursor()
@@ -180,7 +180,7 @@ def Graph_jp():
     connection= psycopg2.connect(user ='webadmin',
                                 password ='MDDnfo15110',
                                 host = 'node38352-bunnapon.proen.app.ruk-com.cloud', 
-                                port = '11234',
+                                port = '5432',
                                 database ='work')
 
     Cursor = connection.cursor()
