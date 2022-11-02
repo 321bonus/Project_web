@@ -32,12 +32,28 @@
     <div class="flag">
         <img src="../static/css/images/Euro.png" width="100px" height="100px">
     </div>
+    <style>
+        .negative { color : red; }
+        .positive { color : green; }
+    </style>
     <div class="box-text">
         <h1>EURO/USD</h1>
         <h2>{{ result_euro[0]}}</h2>
-        <h3>{{ result_euro[1]}}</h3>
-        <h4>{{ result_euro[2]}}</h4>
+        <h3 class="plusmin">{{ result_euro[1]}}</h3>
+        <h4 class="plusmin">{{ result_euro[2]}}</h4>
     </div>
+    <script>
+        function MakePosNeg() {
+          var TDs = document.querySelectorAll('.plusmin');
+        
+          for (var i = 0; i < TDs.length; i++) {
+            var temp = TDs[i];
+            if (temp.firstChild.nodeValue.indexOf('-') == 0) {temp.className = "negative";}
+            else {temp.className = "positive";}
+          }
+        }
+        onload = MakePosNeg()
+        </script>
     <div class="box-text-right">
       
     </div>

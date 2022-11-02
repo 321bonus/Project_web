@@ -1,0 +1,70 @@
+<html>
+<head></head>
+<body>
+<h1>isNaN() example</h1>
+
+<title>untitled</title>
+<style>
+	.negative { color : red; }
+	.positive { color : green; }
+</style>
+
+<table>
+    <tr>
+    	<td rowspan="2">Asset</td>
+        <td colspan="3">Holding</td>
+        <td colspan="3">Daily</td>
+        <td colspan="3">Current Position</td>
+    </tr>
+    <tr>
+    	<td>Holding</td>
+        <td>Cost Per Share</td>
+        <td>Cost</td>
+    	<td>Current Price</td>
+        <td>Price Change</td>
+        <td>Percent Change</td>
+        <td>Value</td>
+        <td>Profit</td>
+        <td>Percent</td>
+    </tr>
+    <tr>
+		<td>Oil</td>
+        <td>100</td>
+        <td>$55.08</td>
+        <td>$10,000</td>
+        <td>$53.00</td>
+        <td class="plusmin">-$2.08</td>
+        <td class="plusmin">-1.5%</td>
+        <td>$9,500</td>
+        <td class="plusmin">-$500</td>
+        <td class="plusmin">-18.57%</td>
+	</tr>
+	<tr>
+		<td>Gold</td>
+        <td>100</td>
+        <td>$1050</td>
+        <td>$100,000</td>
+        <td>$2,000</td>
+        <td class="plusmin">$53.12</td>
+        <td class="plusmin">+2.5%</td>
+        <td>£110,000</td>
+        <td class="plusmin">$10,000</td>
+        <td class="plusmin">+15.57%</td>
+	</tr>
+    <script>
+        function MakePosNeg() {
+          var TDs = document.querySelectorAll('.plusmin');
+        
+          for (var i = 0; i < TDs.length; i++) {
+            var temp = TDs[i];
+            if (temp.firstChild.nodeValue.indexOf('-') == 0) {temp.className = "negative";}
+            else {temp.className = "positive";}
+          }
+        }
+        onload = MakePosNeg()
+        </script>
+
+<h2 class="cal-num" >42</h2>
+
+</body>
+</html>

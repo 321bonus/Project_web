@@ -31,12 +31,28 @@
     <div class="flag">
         <img src="../static/css/images/japan.png" width="100px" height="100px">
     </div>
+    <style>
+        .negative { color : red; }
+        .positive { color : green; }
+    </style>
     <div class="box-text">
         <h1>YEN/USD</h1>
         <h2>{{ result_japan[0]}}</h2>
-        <h3>{{ result_japan[1]}}</h3>
-        <h4>{{ result_japan[2]}}</h4>
+        <h3 class="plusmin">{{ result_japan[1]}}</h3>
+        <h4 class="plusmin">{{ result_japan[2]}}</h4>
     </div>
+    <script>
+        function MakePosNeg() {
+          var TDs = document.querySelectorAll('.plusmin');
+        
+          for (var i = 0; i < TDs.length; i++) {
+            var temp = TDs[i];
+            if (temp.firstChild.nodeValue.indexOf('-') == 0) {temp.className = "negative";}
+            else {temp.className = "positive";}
+          }
+        }
+        onload = MakePosNeg()
+        </script>
     <div class="box-text-right">
       
     </div>

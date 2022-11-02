@@ -29,7 +29,12 @@
 
 
     <div class="container">
+        <style>
+            .negative { color : red; }
+            .positive { color : green; }
+        </style>
             <table id = 'customer'>
+
                 <thead>
                 <tr>
                     <th><img src="../static/css/images/America.png" width="40px" height="40px" style="vertical-align:middle"> Amount</th>
@@ -47,8 +52,8 @@
                 <tr>
                     <td><img src="../static/css/images/Euro.png" width="40px" height="40px" style="vertical-align:middle">Euro</td>
                     <td>{{ result_euro[0] }}</td>
-                    <td>{{ result_euro[1]}}</td>
-                    <td>{{ result_euro[2]}}</td>
+                    <td class="plusmin">{{ result_euro[1]}}</td>
+                    <td class="plusmin">{{ result_euro[2]}}</td>
                     
                     
 
@@ -59,8 +64,8 @@
                 <tr>
                     <td><img src="../static/css/images/japan.png" width="40px" height="40px" style="vertical-align:middle">Japan</td>
                     <td>{{ result_japan[0]}}</td>
-                    <td>{{result_japan[1]}}</td>
-                    <td>{{ result_japan[2]}}</td>
+                    <td class="plusmin">{{result_japan[1]}}</td>
+                    <td class="plusmin">{{ result_japan[2]}}</td>
                     
 
                 </tbody>
@@ -71,11 +76,23 @@
                 <tr>
                     <td><img src="../static/css/images/thai.png" width="40px" height="40px" style="vertical-align:middle">Thailand</td>
                     <td>{{  result_thai[0]}}</td>
-                    <td>{{  result_thai[1]}}</td>
-                    <td>{{  result_thai[2]}}</td>
+                    <td class="plusmin">{{  result_thai[1]}}</td>
+                    <td class="plusmin">{{  result_thai[2]}}</td>
                     
                 </tbody>
                 
+                <script>
+                    function MakePosNeg() {
+                      var TDs = document.querySelectorAll('.plusmin');
+                    
+                      for (var i = 0; i < TDs.length; i++) {
+                        var temp = TDs[i];
+                        if (temp.firstChild.nodeValue.indexOf('-') == 0) {temp.className = "negative";}
+                        else {temp.className = "positive";}
+                      }
+                    }
+                    onload = MakePosNeg()
+                    </script>
 
 
             </table>
