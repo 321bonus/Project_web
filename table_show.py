@@ -74,10 +74,10 @@ def Table():
         result_euro.append(i) 
 
     for j in  all_cur2[0]:
-        result_japan.append(j) 
+        result_thai.append(j) 
 
     for k in  all_cur3[0]:
-        result_thai.append(k) 
+        result_japan.append(k) 
 
 
 
